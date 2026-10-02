@@ -17,7 +17,10 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Build with Gradle
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build mod
         working-directory: ClientElytraVisual_1.21.11
         run: gradle build
 
